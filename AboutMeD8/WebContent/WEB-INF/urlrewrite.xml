@@ -1,0 +1,27 @@
+<urlrewrite>
+	<rule>
+<!-- 		/cat/nhac-thieu-nhi-3.html -->
+		<from>^/trang-chu.html$</from>			<!-- Không cần cũng được -->
+		<to>/index</to>
+	</rule>
+	<rule>
+<!-- 		/cat/nhac-thieu-nhi-3.html -->
+		<from>^/login.html$</from>			<!-- Không cần cũng được -->
+		<to>/auth/login</to>
+	</rule>
+	
+	
+	<rule>
+		<!-- /detail?did=56&cid=15 -->
+		<!-- /detail?did=59&cid=4 -->
+		<from>^/blog/(.*)-([0-9]+)-([0-9]+).html$</from>
+		<to>/blog?id=$2&amp;idCat=$3</to>
+	</rule>
+		<rule>
+		<!-- /cat/nhac-tru-tinh-3.html -->
+		<from>^/blog/(.*)-([0-9]+).html$</from>
+		<to>/blog?msg=$2</to>
+	</rule>
+	
+	
+</urlrewrite>
